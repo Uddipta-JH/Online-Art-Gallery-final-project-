@@ -1,0 +1,586 @@
+a {
+  text-decoration: none;
+}
+
+/* ------------------HEADPART------------------------ */
+.mainbackground {
+  /* background-image: url(131756-abstract-red-and-white-po.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+.headbar {
+  height: 10%;
+  margin: 5px;
+  display: flex;
+  border-radius: 5px;
+  background-color: black;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.logo {
+  /* padding-top: 4px; */
+  /* flex: 1; */
+  text-align: center;
+}
+
+.imgsize {
+  height: 120px;
+  width: 130px;
+  margin: 4px;
+}
+
+.headname {
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 30px; */
+  flex: 5;
+  letter-spacing: 0;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.headeroption {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* -----------------HEADPART------------------------- */
+
+p#compname {
+  font-size: 50px;
+}
+
+p#compslogo {
+  font-size: 20px;
+}
+
+.headoptionpart,
+.navbar {
+  align-items: center;
+  text-align: center;
+}
+
+.headeroption a,
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ------------------NAV BAR--------------------------- */
+.navbar {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+nav#nav2 {
+  width: auto;
+  /* height: 50px; */
+  margin: 0px;
+  background-color: rgb(112 0 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 7px 5px 1px rgb(0 0 0 / 73%);
+}
+
+div#rightnav {
+  margin-right: 30px;
+}
+
+div#leftnav {
+  margin-left: 30px;
+}
+/* -----------------NAV BAR---------------------------- */
+/* -----------------login part---------------------------- */
+.loginbox {
+  width: 30%;
+  /* height: 10%; */
+  margin: auto;
+  /* background-color: honeydew; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+  font-family: "Titillium Web", sans-serif;
+  padding-top: 5%;
+}
+
+.loginboxpic {
+  background: white;
+  height: 350px;
+  padding-top: 40px;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.box input {
+  height: 50px;
+  border-color: black;
+}
+
+.registersubmit button,
+.box button {
+  background-color: rgba(0, 0, 0, 0.623);
+  color: white;
+}
+
+/* -----------------login part---------------------------- */
+/* -------------reg form------------------------------ */
+
+.registerbox {
+  width: 66%;
+  /* height: 10%; */
+  margin: auto;
+  background: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+  /* font-family: "Titillium Web", sans-serif; */
+  padding-top: 5%;
+}
+
+.registerbox input,
+.registerbox select,
+.registerbox textarea {
+  width: 83%;
+  height: 50px;
+}
+
+.registerform {
+  height: auto;
+  padding-top: 40px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 4;
+}
+
+.registerhead,
+.registersubmit {
+  flex: 1;
+  text-align: center;
+}
+
+.ro {
+  display: flex;
+  padding-left: 63px;
+  padding-top: 20px;
+}
+
+.col {
+  flex: 1;
+}
+
+/* -------------reg form------------------------------ */
+
+/* -------------patient detail table------------------------------ */
+
+.patienttable {
+  margin: auto;
+  background: white;
+}
+
+/* -------------patient detail table------------------------------ */
+/* -------------LOGIN/REGISTER ------------------------------ */
+.part1 {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.part1a {
+  z-index: -2;
+  flex-basis: 34%;
+}
+
+.part1b {
+  background-color: #1113;
+  flex-basis: 24%;
+  text-align: center;
+  border-radius: 44px;
+}
+
+marquee#homemarq,
+img#mqimg {
+  height: 400px;
+  width: 525px;
+}
+
+.part1c {
+  background-color: #1113;
+  flex-basis: 24%;
+  text-align: center;
+  border-radius: 44px;
+}
+
+/* -------------LOGIN/REGISTER ------------------------------ */
+
+/* -------------Homepage Content------------------------------ */
+.part2 {
+  /* background-color: rgb(37, 37, 34); */
+  height: 493px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.part2c,
+.part2a,
+.part2b {
+  height: 468px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.part2a {
+  /* background-color: rgb(121, 117, 117)21, 117, 117); */
+  padding-left: 16px;
+  padding-right: 16px;
+  /* background-image: url(depositphotos_34962997-stock-photo-seamless-floral-pattern-with-red.jpg); */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  background-color: white;
+
+  margin: 0;
+}
+
+.part2b {
+  background-color: white;
+  padding-right: 16px;
+  /* background-image: url(131756-abstract-red-and-white-po.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+.part2c {
+  background-color: white;
+  padding-right: 16px;
+  /* background-image: url(131756-abstract-red-and-white-po.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+/* -------------Homepage Content--------------------------- */
+/* -------------FOOTER------------------------------ */
+
+.part3 {
+  /* background-color: rgb(255, 0, 0); */
+  /* height: auto; */
+  display: flex;
+  /* text-align: center; */
+  /* flex-direction: row; */
+  justify-content: space-between;
+  /* background: rgb(51, 51, 51); */
+  flex-wrap: wrap;
+  color: white;
+}
+
+.footerdesign {
+  background-color: #1a0404;
+  text-align: center;
+  height: 100%;
+  padding-top: 50px;
+}
+
+.footerdesign hr {
+  background-color: white;
+  color: white;
+  width: 100%;
+}
+
+.footerdesign p {
+  color: white;
+}
+.footerpart1,
+.footerpart2,
+.footerpart3 {
+  /* width: 1000px; */
+  /* height: auto;
+  margin: auto; */
+  flex-basis: 20%;
+}
+
+.footerdesign a {
+  color: rgb(158, 145, 145);
+  text-decoration: none;
+}
+/* ------------------------------------------- */
+
+@media (max-device-width: 568px) {
+  .imgsize {
+    height: 400px;
+    width: 400px;
+  }
+
+  .headbar {
+    height: 330px;
+    margin: 0px;
+  }
+
+  p#compname {
+    font-size: 145px;
+  }
+
+  p#compslogo {
+    font-size: 54px;
+  }
+
+  .headeroption {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .part3 {
+    display: block;
+    /* height: auto; */
+  }
+
+  .footerdesign {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+  }
+
+  .part3 h6 {
+    font-size: 35px;
+  }
+
+  nav#nav2 {
+    font-size: 35px !important;
+  }
+
+  .loginbox {
+    padding-top: 200px;
+    padding-bottom: 400px;
+    width: 86%;
+  }
+
+  div#loginbox {
+    height: 600px;
+  }
+
+  .loginbox form {
+    width: 83%;
+  }
+
+  .loginbox h2 {
+    font-size: 69px;
+  }
+
+  .box input {
+    height: 100px;
+  }
+
+  .loginboxpic input {
+    font-size: 48px;
+    border-radius: 20px;
+    border: 3px black solid;
+    color: black;
+  }
+
+  .box button,
+  .registersubmit button {
+    height: 80px;
+    width: 196px;
+    font-size: 44px;
+    border-radius: 18px;
+  }
+
+  .ro {
+    display: block;
+  }
+
+  .registerbox {
+    width: 80%;
+    font-size: 48px;
+  }
+
+  .registerhead h3 {
+    font-size: 50px;
+  }
+
+  .registerbox input,
+  .registerbox select,
+  .registerbox textarea {
+    width: 90%;
+    height: 92px;
+    font-size: 100%;
+    border: 3px black solid;
+  }
+
+  /* .part1 {
+    width: 30%;
+  } */
+
+  .part1a {
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+    flex: 1;
+  }
+
+  .part1b,
+  .part1c {
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-basis: 35%;
+  }
+
+  .part2 {
+    height: auto;
+    font-size: 32px;
+    display: grid;
+  }
+  .part2a {
+    height: 631px;
+  }
+
+  .part2b {
+    height: 533px;
+  }
+
+  .part2c {
+    height: 800px;
+  }
+
+  .part2c,
+  .part2a,
+  .part2b {
+    width: 830px;
+    margin-bottom: 38px;
+    box-shadow: 0 7px 5px 1px rgb(0 0 0 / 73%);
+  }
+
+  marquee#homemarq,
+  img#mqimg {
+    height: 700px;
+    width: 925px;
+  }
+}
+/* -------------------------------BOX ANIMATION---------------------------------------- */
+/* * {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-direction: column;
+}
+body {
+  font-family: 'Baloo 2', cursive;
+}
+.banner-text {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.banner-text ul {
+  height: 50px;
+  float: right;
+}
+.banner-text ul li {
+  display: inline-block;
+  padding: 40px 15px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+}
+.banner-text ul li:hover {
+  cursor: pointer;
+}
+.banner-text h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  margin-top: 20%;
+}
+.animation-area {
+  background: linear-gradient(to left, #8942a8, #ba382f);
+  width: 100%;
+  height: 100vh;
+}
+.box-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 20s linear infinite;
+  bottom: -150px;
+}
+.box-area li:nth-child(1) {
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+.box-area li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+.box-area li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 5.5s;
+}
+.box-area li:nth-child(4) {
+  left: 42%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+.box-area li:nth-child(5) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+.box-area li:nth-child(6) {
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+} */

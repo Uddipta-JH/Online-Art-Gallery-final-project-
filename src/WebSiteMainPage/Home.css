@@ -1,0 +1,14 @@
+.img{
+    /* width: 10 !important; */
+    height: 400px !important;
+    align-items: center !important;
+
+}
+.black{
+    background-color: rgba(0, 0, 0, 0.747) !important;
+}
+
+.About-us{
+    display: flex;
+    
+}

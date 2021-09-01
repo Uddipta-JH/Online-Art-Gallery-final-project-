@@ -1,0 +1,384 @@
+a {
+  text-decoration: none;
+}
+
+/* ------------------HEADPART------------------------ */
+.mainbackground {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+}
+
+.headbar {
+  height: 10%;
+  margin: 2px 0px;
+  display: flex;
+  background-color: rgb(67 42 88);
+  font-family: "Mountains of Christmas", cursive;
+}
+
+.logo {
+  padding-top: 4px;
+  /* flex: ; */
+  text-align: center;
+  padding-left: 15px;
+}
+
+.imgsize {
+  height: 120px;
+  width: 130px;
+  margin: 4px;
+}
+
+.headname {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  flex: 5;
+  letter-spacing: 0;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.headeroption {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* -----------------HEADPART------------------------- */
+
+p#compname {
+  font-size: 60px;
+}
+
+p#compslogo {
+  font-size: 30px;
+}
+
+.headoptionpart,
+.navbar {
+  align-items: center;
+  text-align: center;
+}
+
+.headeroption a,
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ------------------NAV BAR--------------------------- */
+.navbar {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+nav#nav2 {
+  width: auto;
+  /* height: 50px; */
+  margin: 0px;
+  background-color: rgb(112 0 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 7px 5px 1px rgb(0 0 0 / 73%);
+}
+
+div#rightnav {
+  margin-right: 30px;
+}
+
+div#leftnav {
+  margin-left: 30px;
+}
+
+.btn-group {
+  display: none;
+}
+
+.navbarpart1 {
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+  flex: 4;
+  justify-content: left;
+}
+
+.dropdown-item {
+  font-size: 38px;
+}
+/* -----------------NAV BAR---------------------------- */
+/* -----------------login part---------------------------- */
+.loginbox {
+  width: 30%;
+  /* height: 10%; */
+  margin: auto;
+  /* background-color: honeydew; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+  font-family: "Titillium Web", sans-serif;
+  padding-top: 5%;
+}
+
+.loginboxpic {
+  background: white;
+  height: 350px;
+  padding-top: 40px;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.box input {
+  height: 50px;
+  border-color: black;
+}
+
+.registersubmit button,
+.box button {
+  background-color: rgba(0, 0, 0, 0.623);
+  color: white;
+}
+
+/* -----------------login part---------------------------- */
+/* -------------reg form------------------------------ */
+
+.registerbox {
+  width: 66%;
+  /* height: 10%; */
+  margin: auto;
+  background: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+  /* font-family: "Titillium Web", sans-serif; */
+  padding-top: 5%;
+}
+
+.registerbox input,
+.registerbox select,
+.registerbox textarea {
+  width: 83%;
+  height: 50px;
+}
+
+.registerform {
+  height: auto;
+  padding-top: 40px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 4;
+}
+
+.registerhead,
+.registersubmit {
+  flex: 1;
+  text-align: center;
+}
+
+.ro {
+  display: flex;
+  padding-left: 63px;
+  padding-top: 20px;
+}
+
+.col {
+  flex: 1;
+}
+
+/* -------------reg form------------------------------ */
+
+/* -------------patient detail table------------------------------ */
+
+.patienttable {
+  /* width: 66%; */
+  /* height: 10%; */
+  margin: auto;
+  background: white;
+  /* display: flex; */
+  /* justify-content:center; */
+  /* flex-direction: column; */
+  /* padding-bottom: 100px; */
+  /* font-family: "Titillium Web", sans-serif; */
+  /* padding-top: 5%; */
+}
+
+/* -------------patient detail table------------------------------ */
+
+/* -------------FOOTER------------------------------ */
+
+.part3 {
+  /* background-color: rgb(255, 0, 0); */
+  /* height: auto; */
+  display: flex;
+  /* text-align: center; */
+  /* flex-direction: row; */
+  justify-content: space-between;
+  /* background: rgb(51, 51, 51); */
+  color: white;
+}
+
+.footerdesign {
+  background-color: #2c2c2c;
+  text-align: center;
+  height: 100%;
+  padding-top: 50px;
+}
+
+.footerdesign hr {
+  background-color: white;
+  color: white;
+  width: 100%;
+}
+
+.footerdesign p {
+  color: white;
+}
+.footerpart1,
+.footerpart2,
+.footerpart3 {
+  /* width: 1000px; */
+  height: auto;
+  margin: auto;
+}
+
+.footerdesign a {
+  color: rgb(158, 145, 145);
+  text-decoration: none;
+}
+/* ------------------------------------------- */
+
+@media (max-device-width: 568px) {
+  .imgsize {
+    height: 272px;
+    width: 276px;
+  }
+
+  .navbarpart1 {
+    display: none;
+  }
+
+  .btn {
+    background-color: rgba(255, 255, 255, 0.952);
+    font-size: 38px;
+    border-radius: 10px;
+  }
+
+  .btn-group {
+    display: block;
+    padding-left: 8px;
+  }
+
+  p#compname {
+    font-size: 108px;
+  }
+
+  p#compslogo {
+    font-size: 39px;
+  }
+
+  .headeroption {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+  }
+
+  .part3 {
+    display: block;
+    height: auto;
+  }
+
+  .animation {
+    display: none;
+  }
+  .footerdesign {
+    /* display: flex;
+    flex-direction: column; */
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .part3 h6 {
+    font-size: 30px;
+  }
+
+  nav#nav2 {
+    font-size: 35px !important;
+  }
+
+  .loginbox {
+    padding-top: 200px;
+    padding-bottom: 400px;
+    width: 86%;
+  }
+
+  div#loginbox {
+    height: 600px;
+  }
+
+  .loginbox form {
+    width: 83%;
+  }
+
+  .loginbox h2 {
+    font-size: 69px;
+  }
+
+  .box input {
+    height: 100px;
+  }
+
+  .loginboxpic input {
+    font-size: 48px;
+    border-radius: 20px;
+    border: 3px black solid;
+    color: black;
+  }
+
+  .box button {
+    height: 80px;
+    width: 196px;
+    font-size: 44px;
+    border-radius: 18px;
+  }
+
+  .ro {
+    display: block;
+  }
+
+  .registerbox {
+    width: 80%;
+    font-size: 48px;
+  }
+
+  .registerhead h3 {
+    font-size: 50px;
+  }
+
+  .registerbox input,
+  .registerbox select,
+  .registerbox textarea {
+    width: 90%;
+    height: 92px;
+    font-size: 100%;
+    border: 3px black solid;
+  }
+
+  .navbar {
+    display: none;
+  }
+}

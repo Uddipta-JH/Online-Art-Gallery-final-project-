@@ -1,0 +1,27 @@
+nav{
+    background-color: #493058;
+}
+
+.artgallery{
+    font-family: 'Mountains of Christmas', cursive !important;
+    font-size: 40px !important;
+}
+.img-thumbnail{
+    width: 40px;
+    height: 40px;
+}
+nav a{
+    font-size: 21px !important;
+    color: rgb(255, 255, 255) !important;
+}
+#i{
+    color: white !important;
+}
+#btn:hover{
+    color: #493058 !important;
+}
+
+.dropdown-menu{
+    background-color:#493058 !important;
+    width: 330px !important;
+}
