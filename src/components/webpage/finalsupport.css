@@ -260,7 +260,7 @@ div#leftnav {
 }
 /* ------------------------------------------- */
 
-@media (max-device-width: 568px) {
+/* @media (max-device-width: 568px) {
   .imgsize {
     height: 272px;
     width: 276px;
@@ -306,8 +306,8 @@ div#leftnav {
     display: none;
   }
   .footerdesign {
-    /* display: flex;
-    flex-direction: column; */
+    // display: flex;
+    flex-direction: column;
     font-size: 30px;
     width: 100%;
   }
@@ -381,4 +381,4 @@ div#leftnav {
   .navbar {
     display: none;
   }
-}
+} */

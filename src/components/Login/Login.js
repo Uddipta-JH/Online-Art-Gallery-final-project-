@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
-import { HeaderControll } from "../Header/Header/HeaderControll";
 
 export function Login() {
   const history = useHistory();
@@ -36,12 +35,28 @@ export function Login() {
           swal("Error!", "User Not Present");
         } else {
           localStorage.setItem("loginSession", JSON.stringify(response.data));
-          swal("Success!", "Logged in");
+          // swal("Success!", "Logged in");
           let a = localStorage.getItem("loginSession");
           let b = JSON.parse(a);
+          let regid = b.regid;
+          let name = b.fname;
+          let lastname = b.lname;
+          let mobile = b.mobilenumber;
+          let emailid = b.email;
+          let add = b.address;
+          let type = b.type;
+          localStorage.setItem("type", type);
+          localStorage.setItem("regid", regid);
+          localStorage.setItem("name", name);
+          localStorage.setItem("lname", lastname);
+          localStorage.setItem("mobilenumber", mobile);
+          localStorage.setItem("email", emailid);
+          localStorage.setItem("address", add);
           if (b.type == "Buyer") history.push("/", JSON.stringify(response));
           else if (b.type == "Seller")
             history.push("/", JSON.stringify(response));
+
+          // redirect(response.data.type);
         }
       });
   });

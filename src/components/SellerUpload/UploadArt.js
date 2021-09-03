@@ -18,12 +18,14 @@ function UploadArt() {
     sellingprice: "",
     discription: "",
     // artpic: "",
+    regid: "",
   });
 
   const handleUploadArt = (e) => {
+    // console.log(regid);
+    // console.log(artistname);
     e.preventDefault();
     if (
-      UploadArtDetails.artistname == "" ||
       UploadArtDetails.productname == "" ||
       UploadArtDetails.style == "" ||
       UploadArtDetails.auctionstatus == "" ||
@@ -33,6 +35,8 @@ function UploadArt() {
     ) {
       swal("Error", "Please Fill evry details", "error");
     } else {
+      UploadArtDetails.artistname = localStorage.getItem("name");
+      UploadArtDetails.regid = localStorage.getItem("regid");
       postDataToServer(UploadArtDetails);
       e.preventDefault();
     }
@@ -40,6 +44,7 @@ function UploadArt() {
 
   const postDataToServer = useCallback((data) => {
     const formData = new FormData();
+    formData.append("regid", data.regid);
     formData.append("artistname", data.artistname);
     formData.append("productname", data.productname);
     formData.append("style", data.style);
@@ -50,8 +55,11 @@ function UploadArt() {
     console.log("emp =>" + JSON.stringify(data));
 
     axios.post(`http://localhost:8081/Upload/Art`, data).then((response) => {
-      if (response.data == "success") {
-        swal("Error!", "Upload Unsuccessful");
+      if (response.data != null) {
+        swal("Success!", "Uploaded");
+        history.push("/Profile");
+      } else if (response.data == "") {
+        swal("Error!", "Please enter details Properly");
       }
     });
   });
@@ -65,13 +73,7 @@ function UploadArt() {
               <label>Artist Name:</label>
               <input
                 name="artistname"
-                value={UploadArtDetails.artistname}
-                onChange={(e) => {
-                  setUploadArt({
-                    ...UploadArtDetails,
-                    artistname: e.target.value,
-                  });
-                }}
+                value={localStorage.getItem("name")}
                 type="text"
                 className="form-control"
                 id="Aname"
@@ -107,6 +109,7 @@ function UploadArt() {
                 }}
                 className="ml-5"
               >
+                <option value="">--Select One--</option>
                 <option value="Oil Painting">Oil Painting</option>
                 <option value="Digital Painting">Digital Painting</option>
                 <option value="Matte Painting">Matte Painting</option>
@@ -208,7 +211,11 @@ function UploadArt() {
           <div className="text-center">
             <br></br>
 
-            <input type="submit" value="Pay" className="btn btn-primary px-5" />
+            <input
+              type="submit"
+              value="Submit"
+              className="btn btn-primary px-5"
+            />
           </div>
         </form>
       </div>

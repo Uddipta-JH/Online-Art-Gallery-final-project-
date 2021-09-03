@@ -8,13 +8,34 @@ export const Profile = () => {
         <div className="row ">
           <div className="col-4 border">
             <div className="conatiner py-5">
-              <h4>Overview</h4>
+              <h4></h4>
               <hr />
               <h5>ORDERS</h5>
               <h5 className="text-secondary pl-3 pt-2">
                 {" "}
                 <a href="">Order & returns</a>
               </h5>
+              <hr />
+              <h5>ART</h5>
+              <h5 className="text-secondary pl-3 pt-2">
+                {" "}
+                <a href="UploadArt">Upload Art</a>
+              </h5>
+              <h5 className="text-secondary pl-3 pt-2">
+                {" "}
+                <a href="">Coupons</a>
+              </h5>
+              {/* <h5 className="text-secondary pl-3 pt-2">
+                {" "}
+                <a href="">Coupons</a>
+              </h5>
+              <hr />
+              <h5>ORDERS</h5>
+              <h5 className="text-secondary pl-3 pt-2">
+                {" "}
+                <a href="">Order & returns</a>
+              </h5>
+              <hr />
               <hr />
               <h5>CREDITS</h5>
               <h5 className="text-secondary pl-3 pt-2">
@@ -24,28 +45,7 @@ export const Profile = () => {
               <h5 className="text-secondary pl-3 pt-2">
                 {" "}
                 <a href="">Coupons</a>
-              </h5>
-              <h5 className="text-secondary pl-3 pt-2">
-                {" "}
-                <a href="">Coupons</a>
-              </h5>
-              <hr />
-              <h5>ORDERS</h5>
-              <h5 className="text-secondary pl-3 pt-2">
-                {" "}
-                <a href="">Order & returns</a>
-              </h5>
-              <hr />
-              <hr />
-              <h5>CREDITS</h5>
-              <h5 className="text-secondary pl-3 pt-2">
-                {" "}
-                <a href="">Coupons</a>
-              </h5>
-              <h5 className="text-secondary pl-3 pt-2">
-                {" "}
-                <a href="">Coupons</a>
-              </h5>
+              </h5> */}
             </div>
           </div>
           <div className="col-8">
@@ -59,16 +59,32 @@ export const Profile = () => {
               </div>
               <div className="card-body">
                 <h5 className="card-title">Profile</h5>
-                <input
-                  type="text"
-                  className="form-control"
-                  id=""
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                />
+                <h6>
+                  {" "}
+                  <b>Name:</b>
+                  <i>
+                    {localStorage.getItem("name")}{" "}
+                    {localStorage.getItem("lname")}
+                  </i>
+                </h6>
+                <h6>
+                  {" "}
+                  <b>Mobile: </b>
+                  <i>{localStorage.getItem("mobilenumber")} </i>
+                </h6>
+                <h6>
+                  {" "}
+                  <b>EMail Id: </b>
+                  <i>{localStorage.getItem("email")} </i>
+                </h6>
+                <h6>
+                  {" "}
+                  <b>Address: </b>
+                  <i>{localStorage.getItem("address")} </i>
+                </h6>
               </div>
 
-              <ul className="list-group list-group-flush">
+              {/* <ul className="list-group list-group-flush">
                 <li className="list-group-item">Cras justo odio</li>
                 <li className="list-group-item">Dapibus ac facilisis in</li>
                 <li className="list-group-item">Vestibulum at eros</li>
@@ -77,12 +93,12 @@ export const Profile = () => {
                 <a href="" className="btn btn-primary btn-lg">
                   Edit Profile
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </div>
-      <div className="container my-4">
+      {/* <div className="container my-4">
         <div class="card text-center">
           <div class="card-header">Featured</div>
           <div class="card-body">
@@ -97,7 +113,7 @@ export const Profile = () => {
           </div>
           <div class="card-footer text-muted">2 days ago</div>
         </div>
-      </div>
+      </div> */}
       {/* <div className="container">
             <div className="row ">
                 <div class="card bg-light mb-3 col-3 mx-4">

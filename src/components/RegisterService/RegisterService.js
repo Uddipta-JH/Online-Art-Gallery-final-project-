@@ -2,7 +2,7 @@ import axios from "axios";
 
 const URL_registers = "http://localhost:8081/api/v1/user";
 const URL_GetProducts = "http://localhost:8081/api/v1/artList";
-const URL_AddtoCart = "http://localhost:8081/api/v1/cart";
+const URL_AddtoCart = "http://localhost:8081/addTo/cart";
 
 class RegisterService {
   getInformation() {

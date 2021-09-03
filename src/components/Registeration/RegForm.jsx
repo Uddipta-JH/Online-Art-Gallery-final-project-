@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { BeforeLoginNavbar } from "../../WebSiteMainPage/BeforeLoginNavbar";
-import { HeaderControll } from "../Header/Header/HeaderControll";
 import RegisterService from "../RegisterService/RegisterService";
 
 class RegForm extends Component {
@@ -10,11 +8,8 @@ class RegForm extends Component {
       type: "",
       fname: "",
       lname: "",
-      username: "",
       mobilenumber: "",
       address: "",
-      city: "",
-      state: "",
       email: "",
       password: "",
     };
@@ -22,11 +17,8 @@ class RegForm extends Component {
     this.changeType = this.changeType.bind(this);
     this.changeFname = this.changeFname.bind(this);
     this.changeLname = this.changeLname.bind(this);
-    this.changeUserName = this.changeUserName.bind(this);
     this.changeMobileNumber = this.changeMobileNumber.bind(this);
     this.changeAddress = this.changeAddress.bind(this);
-    this.changeCity = this.changeCity.bind(this);
-    this.changeState = this.changeState.bind(this);
     this.changeEmail = this.changeEmail.bind(this);
     this.changePassword = this.changePassword.bind(this);
   }
@@ -37,14 +29,11 @@ class RegForm extends Component {
     let user = {
       email: this.state.email,
       address: this.state.address,
-      city: this.state.city,
       fname: this.state.fname,
       lname: this.state.lname,
       mobilenumber: this.state.mobilenumber,
       password: this.state.password,
-      state: this.state.state,
       type: this.state.type,
-      username: this.state.username,
     };
 
     console.log("user =>" + JSON.stringify(user));
@@ -67,9 +56,6 @@ class RegForm extends Component {
     this.setState({ lname: event.target.value });
   };
 
-  changeUserName = (event) => {
-    this.setState({ username: event.target.value });
-  };
 
   changeMobileNumber = (event) => {
     this.setState({ mobilenumber: event.target.value });
@@ -79,13 +65,6 @@ class RegForm extends Component {
     this.setState({ address: event.target.value });
   };
 
-  changeState = (event) => {
-    this.setState({ state: event.target.value });
-  };
-
-  changeCity = (event) => {
-    this.setState({ city: event.target.value });
-  };
 
   changeEmail = (event) => {
     this.setState({ email: event.target.value });
@@ -97,8 +76,6 @@ class RegForm extends Component {
   render() {
     return (
       <div>
-        <HeaderControll />
-
       <div className="container">
         <h2 className=" text-center my-2 bg-dark py-2 text-light">Register</h2>
         <form className="border p-3 m-2 ">
@@ -138,16 +115,6 @@ class RegForm extends Component {
             ></input>
           </div>
 
-          <div className="form-row">
-            <label for="username">Username</label>
-            <input
-              name="username"
-              type="text"
-              value={this.state.userName}
-              onChange={this.changeUserName}
-              className="form-control shadow-none false"
-            ></input>
-          </div>
 
           <div className="form-row">
             <label for="mobilenumber">Mobile Number</label>
@@ -171,29 +138,7 @@ class RegForm extends Component {
             ></input>
           </div>
 
-          <div className="form-row">
-            <div className="form-group col-md-6">
-              <label for="city">City</label>
-              <input
-                class="form-control shadow-none false"
-                name="city"
-                type="text"
-                value={this.state.city}
-                onChange={this.changeCity}
-              />
-            </div>
-
-            <div className="form-group col-md-6">
-              <label for="state">State</label>
-              <input
-                class="form-control shadow-none false"
-                name="state"
-                type="text"
-                value={this.state.state}
-                onChange={this.changeState}
-              />
-            </div>
-          </div>
+          
 
           <div className="form-row">
             <label for="email">Email</label>{" "}
@@ -209,7 +154,7 @@ class RegForm extends Component {
             <label for="password">Password</label>{" "}
             <input
               name="password"
-              type="text"
+              type="password"
               value={this.state.password}
               onChange={this.changePassword}
               className="form-control shadow-none false"
@@ -220,7 +165,7 @@ class RegForm extends Component {
             <label for="confirmPassword">Confirm Password</label>{" "}
             <input
               name="confirmPassword"
-              type="text"
+              type="password"
               className="form-control shadow-none false"
             ></input>
           </div>

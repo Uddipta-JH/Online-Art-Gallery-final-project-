@@ -54,12 +54,12 @@ export const BuyerNavbar = () => {
             </li>
 
             <li class="nav-item active ">
-              <a class="nav-link" href="/ProcuctPage">
+              <a class="nav-link" href="/productPage">
                 Gallery<span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="/AuctionSeller">
                 {" "}
                 Auction
               </a>
@@ -77,8 +77,8 @@ export const BuyerNavbar = () => {
                 style
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">
-                  Action
+                <a class="dropdown-item" href="basket">
+                  Cart
                 </a>
                 <a class="dropdown-item" href="#">
                   Another action
@@ -98,7 +98,7 @@ export const BuyerNavbar = () => {
           <form class="form-inline my-2 my-lg-0">
             <a href="">
               <i class="fas fa-user-circle text-light" />
-              <b className="text-light ml-2">****</b>
+              <b className="text-light ml-2">{localStorage.getItem("name")}</b>
             </a>
             <a
               href=""

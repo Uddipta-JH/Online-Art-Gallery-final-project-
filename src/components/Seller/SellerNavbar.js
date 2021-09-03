@@ -45,23 +45,24 @@ export const SellerNavbar = () => {
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active ">
+            {/* <li class="nav-item active ">
               <a class="nav-link text-danger " href="#">
                 Seller<span class="sr-only">(current)</span>
               </a>
-            </li>
+            </li> */}
 
             <li class="nav-item active ">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="/productPage">
                 Gallery<span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="/AuctionSeller">
                 Auction
               </a>
             </li>
-            <li class="nav-item dropdown">
+
+            {/* <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -85,17 +86,28 @@ export const SellerNavbar = () => {
                   Upload Art
                 </a>
               </div>
-            </li>
+            </li> */}
             <li class="nav-item">
               <a class="nav-link " href="#">
-                blog
+                Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                About Us
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Contact Us
               </a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <a href="Profile">
               <i class="fas fa-user-circle text-light" />
-              <b className="text-light ml-2">Rishab Chaudhari</b>
+              <b className="text-light ml-2">{localStorage.getItem("name")}</b>
             </a>
             <a
               href=""

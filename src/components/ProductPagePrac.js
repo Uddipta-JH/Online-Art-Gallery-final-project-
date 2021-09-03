@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { axios } from "axios";
 import RegisterService from "./RegisterService/RegisterService";
 
 export class ProductPagePrac extends Component {
@@ -14,12 +13,13 @@ export class ProductPagePrac extends Component {
     console.log(event.target.value);
     let id = event.target.value;
     let product = {
-      productid: this.event.value,
+      productid: id,
+      userid: localStorage.getItem("regid"),
     };
 
-    RegisterService.addCart(product).then((res) => {
-      this.props.history.push("/");
-    });
+    console.log(product);
+
+    RegisterService.addCart(product).then((res) => {});
   };
 
   ////////////////////////////////////////////////////////////////
@@ -45,31 +45,26 @@ export class ProductPagePrac extends Component {
             <div key={productDetail.productid}>
               <div
                 class="card"
-                style={{ width: "350px", height: "400px", margin: "40px" }}
+                style={{ width: "350px", height: "480px", margin: "40px" }}
               >
                 <img
                   class="card-img-top"
                   src="https://www.placecage.com/640/360"
                   alt="Card image cap"
-                  style={{ width: "350px", height: "280px" }}
+                  style={{ width: "350px", height: "320px" }}
                 />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <td>{productDetail.productid}</td>
-                  <td>{productDetail.style}</td>
-                  <td>{productDetail.artistname}</td>
-                  <td>Rs: {productDetail.sellingprice}</td>
-                  <form>
-                    {" "}
-                    <button
-                      type="submit"
-                      class="btn btn-primary"
-                      value={productDetail.productid}
-                      onClick={this.addCart}
-                    >
-                      Buy
-                    </button>
-                  </form>
+                  <h5 class="card-title">{productDetail.style}</h5>
+                  <td> {productDetail.artistname}</td>
+                  <tr> Rs: {productDetail.sellingprice}</tr>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    value={productDetail.productid}
+                    onClick={this.addCart}
+                  >
+                    Buy
+                  </button>
                 </div>
               </div>
             </div>

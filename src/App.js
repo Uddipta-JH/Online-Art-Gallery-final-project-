@@ -11,11 +11,12 @@ import { Profile } from "./components/Profile/Profile/Profile";
 import { HeaderControll } from "./components/Header/Header/HeaderControll";
 import UploadArt from "./components/SellerUpload/UploadArt";
 import { Home } from "./components/HomeAfterLogin/HomeAfterLogin/Home";
-import { SellerSide } from "./components/Seller/SellerSide";
 import { WebSiteMainPage } from "./WebSiteMainPage/WebSiteMainPage";
+import { AuctionSellerSide } from "./components/Auction/Auction/AuctionSellerSide";
 import Upload from "./components/SellerUpload/UploadPic";
 import SimpleReactFileUpload from "./components/SellerUpload/UploadPic";
 import { ProductPagePrac } from "./components/ProductPagePrac";
+import { Basket } from "./components/basket/components/Basket";
 export function App() {
   return (
     <div>
@@ -33,14 +34,20 @@ export function App() {
             {/* {localStorage.getItem("loginSession") !== null && (
               <Route path="/Seller" exact component={SellerSide}></Route>
             )} */}
-            <Route path="/" exact component={ProductPagePrac}></Route>
+            <Route
+              path="/productPage"
+              exact
+              component={ProductPagePrac}
+            ></Route>
+            <Route path="/basket" component={Basket} />
             <Route path="/Register" exact component={RegForm}></Route>
             <Route path="/blog" component={Blog}></Route>
             <Route path="/login" component={Login}></Route>
             <Route path="/Payment" component={PaymentPage}></Route>
             <Route path="/UploadArt" component={UploadArt}></Route>
+            <Route path="/AuctionSeller" component={AuctionSellerSide}></Route>
             {/* <Route path="/Auction" component={ac}></Route> */}
-            {localStorage.getItem("loginSession") !== null && (
+            {localStorage.getItem("type") != null && (
               <Route path="/Profile" component={Profile}></Route>
             )}
           </Switch>
