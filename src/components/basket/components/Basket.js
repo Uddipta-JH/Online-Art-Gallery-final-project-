@@ -25,7 +25,11 @@ export class Basket extends Component {
   };
 
   componentDidMount() {
-    axios.get(`http://localhost:8081/addTo/viewCart`).then((res) => {
+    let userid = {
+      userid: localStorage.getItem("regid"),
+    };
+    console.log(userid);
+    axios.post(`http://localhost:8081/addTo/viewCart`, userid).then((res) => {
       this.setState({ products: res.data });
       localStorage.setItem("product", JSON.stringify(res.data));
       console.log(res);
