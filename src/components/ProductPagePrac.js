@@ -16,9 +16,17 @@ export class ProductPagePrac extends Component {
       productid: id,
       userid: localStorage.getItem("regid"),
     };
+    console.log(JSON.stringify(product));
+    console.log(id);
+    console.log();
 
     if (localStorage.getItem("loginSession") != null) {
-      RegisterService.addCart(product).then((res) => {});
+      RegisterService.addCart(product).then((response) => {
+        console.log(response);
+        if (response.data == null) {
+          swal("!Auction Painting!");
+        }
+      });
     } else {
       swal("Error!", "User not logged in!");
     }

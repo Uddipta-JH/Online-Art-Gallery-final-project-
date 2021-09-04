@@ -19,6 +19,7 @@ import { ProductPagePrac } from "./components/ProductPagePrac";
 import { Basket } from "./components/basket/components/Basket";
 import PaymentList from "./components/OrderPayment/PaymentList";
 import PaymentForm from "./components/Payment/Payment/PaymentForm";
+import OrderHistory from "./components/Payment/Payment/OrderHistory";
 export function App() {
   return (
     <div>
@@ -31,8 +32,8 @@ export function App() {
           <Switch>
             {/* <Route path="/" exact component={WebSiteMainPage}></Route> */}
             {/* <Route path="/" exact component={Home} /> */}
-            <Route path="/home" exact component={Home} />
-
+            <Route path="/" exact component={Home} />
+            <Route path="/login" exact component={Login} />
             <Route path="/Upload" component={Upload} />
 
             {/* {localStorage.getItem("loginSession") !== null && (
@@ -43,6 +44,7 @@ export function App() {
             {localStorage.getItem("total") != null && (
               <Route path="/pay" component={PaymentForm} />
             )}
+            <Route path="/orderHistory" component={OrderHistory} />
             <Route path="/basket" component={Basket} />
             <Route path="/Register" component={RegForm}></Route>
             <Route path="/blog" component={Blog}></Route>

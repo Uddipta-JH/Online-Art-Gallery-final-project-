@@ -1,4 +1,4 @@
-function PaymentPage() {
+function PaymentPage(props) {
   return (
     <div>
       <div className="container col-4">

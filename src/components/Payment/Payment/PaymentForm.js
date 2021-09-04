@@ -33,6 +33,7 @@ export default class PaymentForm extends Component {
 
   placeOrder = (e) => {
     e.preventDefault();
+    console.log(this.state.amount);
     let confirmPayment = {
       userid: localStorage.getItem("regid"),
       amount: localStorage.getItem("total"),
@@ -47,7 +48,7 @@ export default class PaymentForm extends Component {
       .then((response) => {
         if (response.data != null)
           swal("Successfully!!", "Order placed successfully");
-        localStorage.removeItem("total");
+        localStorage.setItem("total", 0);
         this.directAfterPayment();
       });
   };

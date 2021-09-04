@@ -46,14 +46,6 @@ export const BuyerNavbar = () => {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active ">
-              <h2>
-                <a class="nav-link text-danger " href="#">
-                  Buyer<span class="sr-only">(current)</span>
-                </a>
-              </h2>
-            </li>
-
-            <li class="nav-item active ">
               <a class="nav-link" href="/productPage">
                 Gallery<span class="sr-only">(current)</span>
               </a>
@@ -74,14 +66,14 @@ export const BuyerNavbar = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                style
+                <i class="fas fa-user-circle text-light" />
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="basket">
                   Cart
                 </a>
-                <a class="dropdown-item" href="#">
-                  Another action
+                <a class="dropdown-item" href="orderHistory">
+                  Order
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">
@@ -89,6 +81,7 @@ export const BuyerNavbar = () => {
                 </a>
               </div>
             </li>
+
             <li class="nav-item">
               <a class="nav-link " href="#">
                 blog
@@ -96,18 +89,56 @@ export const BuyerNavbar = () => {
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <a href="">
-              <i class="fas fa-user-circle text-light" />
-              <b className="text-light ml-2">{localStorage.getItem("name")}</b>
-            </a>
-            <a
-              href=""
-              id="btn"
-              class="btn btn-outline-light ml-3"
-              onClick={endSession}
-            >
-              Logout
-            </a>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-user-circle text-light" />
+                </a>
+                <div
+                  class="dropdown-menu"
+                  style={{
+                    left: "-105px",
+                    textAlign: "center",
+                  }}
+                  aria-labelledby="navbarDropdown"
+                >
+                  <a href="Profile" id="btn" class="btn btn-outline-light ml-3">
+                    Profile
+                  </a>
+                  <div class="dropdown-divider"></div>
+
+                  <a
+                    href=""
+                    id="btn"
+                    class="btn btn-outline-light ml-3 "
+                    onClick={endSession}
+                  >
+                    Logout
+                  </a>
+
+                  <div class="dropdown-divider"></div>
+                  <a href="login" id="btn" class="btn btn-outline-light ml-3">
+                    Login
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a
+                    href="Register"
+                    id="btn"
+                    class="btn btn-outline-light ml-3"
+                  >
+                    Register
+                  </a>
+                </div>
+              </li>
+            </ul>
           </form>
         </div>
       </nav>

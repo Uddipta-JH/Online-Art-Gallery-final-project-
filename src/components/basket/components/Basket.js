@@ -18,11 +18,15 @@ export class Basket extends Component {
     let product = {
       orderProductNo: id,
     };
-    axios
-      .post(`http://localhost:8081/addTo/RemoveFromCart`, product)
-      .then((response) => {
-        swal("Succefully!", "Product Removed");
-      });
+    if (id != 0) {
+      axios
+        .post(`http://localhost:8081/addTo/RemoveFromCart`, product)
+        .then((response) => {
+          swal("Succefully!", "Product Removed");
+        });
+    } else {
+      swal("Empty!", "Empty cart");
+    }
   };
 
   payment = (event) => {
@@ -40,7 +44,8 @@ export class Basket extends Component {
 
   pay = (event) => {
     axios.post(`http://localhost:8081/addTo/OrderTable`, event);
-    this.props.history.push("/pay");
+    let total = localStorage.getItem("total");
+    this.props.history.push("/pay", total);
   };
 
   componentDidMount() {

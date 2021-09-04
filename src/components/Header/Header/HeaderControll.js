@@ -1,6 +1,6 @@
 import { BuyerNavbar } from "./BuyerNavbar";
 import { BeforeLoginNavbar } from "./BeforeLoginNavbar";
-import { SellerNavbar } from "../../Seller/SellerNavbar";
+import { SellerNavbar } from "./SellerNavbar";
 
 export function HeaderControll() {
   return (
