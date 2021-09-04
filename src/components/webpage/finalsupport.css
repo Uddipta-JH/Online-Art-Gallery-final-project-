@@ -260,43 +260,7 @@ div#leftnav {
 }
 /* ------------------------------------------- */
 
-/* @media (max-device-width: 568px) {
-  .imgsize {
-    height: 272px;
-    width: 276px;
-  }
-
-  .navbarpart1 {
-    display: none;
-  }
-
-  .btn {
-    background-color: rgba(255, 255, 255, 0.952);
-    font-size: 38px;
-    border-radius: 10px;
-  }
-
-  .btn-group {
-    display: block;
-    padding-left: 8px;
-  }
-
-  p#compname {
-    font-size: 108px;
-  }
-
-  p#compslogo {
-    font-size: 39px;
-  }
-
-  .headeroption {
-    display: none;
-  }
-
-  .logo {
-    display: flex;
-  }
-
+@media (max-device-width: 568px) {
   .part3 {
     display: block;
     height: auto;
@@ -306,7 +270,7 @@ div#leftnav {
     display: none;
   }
   .footerdesign {
-    // display: flex;
+    /* // display: flex; */
     flex-direction: column;
     font-size: 30px;
     width: 100%;
@@ -315,70 +279,4 @@ div#leftnav {
   .part3 h6 {
     font-size: 30px;
   }
-
-  nav#nav2 {
-    font-size: 35px !important;
-  }
-
-  .loginbox {
-    padding-top: 200px;
-    padding-bottom: 400px;
-    width: 86%;
-  }
-
-  div#loginbox {
-    height: 600px;
-  }
-
-  .loginbox form {
-    width: 83%;
-  }
-
-  .loginbox h2 {
-    font-size: 69px;
-  }
-
-  .box input {
-    height: 100px;
-  }
-
-  .loginboxpic input {
-    font-size: 48px;
-    border-radius: 20px;
-    border: 3px black solid;
-    color: black;
-  }
-
-  .box button {
-    height: 80px;
-    width: 196px;
-    font-size: 44px;
-    border-radius: 18px;
-  }
-
-  .ro {
-    display: block;
-  }
-
-  .registerbox {
-    width: 80%;
-    font-size: 48px;
-  }
-
-  .registerhead h3 {
-    font-size: 50px;
-  }
-
-  .registerbox input,
-  .registerbox select,
-  .registerbox textarea {
-    width: 90%;
-    height: 92px;
-    font-size: 100%;
-    border: 3px black solid;
-  }
-
-  .navbar {
-    display: none;
-  }
-} */
+}
