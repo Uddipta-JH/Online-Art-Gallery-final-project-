@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { Component } from "react";
+import React, { Component, useCallback } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
@@ -8,20 +8,39 @@ export class Basket extends Component {
   constructor() {
     super();
     this.state = { products: [], productid: "" };
+
+    this.payment = this.payment.bind(this);
   }
 
   RemoveProduct = (event) => {
     let id = event.target.value;
     console.log(id);
     let product = {
-      cartId: id,
+      orderProductNo: id,
     };
     axios
       .post(`http://localhost:8081/addTo/RemoveFromCart`, product)
       .then((response) => {
         swal("Succefully!", "Product Removed");
-        this.props.history.push("/");
       });
+  };
+
+  payment = (event) => {
+    let user = {
+      userid: localStorage.getItem("regid"),
+    };
+
+    axios.post(`http://localhost:8081/addTo/Sum`, user).then((res) => {
+      if (res.data == null) localStorage.setItem("total", 0);
+      else localStorage.setItem("total", res.data);
+      this.pay(user);
+    });
+    console.log(localStorage.getItem("total"));
+  };
+
+  pay = (event) => {
+    axios.post(`http://localhost:8081/addTo/OrderTable`, event);
+    this.props.history.push("/pay");
   };
 
   componentDidMount() {
@@ -68,10 +87,10 @@ export class Basket extends Component {
                   </div>
                 </div>
 
-                <form>
-                  <div className="col-2 my-auto">
+                <form style={{ margin: "auto" }}>
+                  <div className="col-2">
                     <button
-                      value={productDetail.cartId}
+                      value={productDetail.orderProductNo}
                       onClick={this.RemoveProduct}
                       className="btn btn-primary ml-3"
                     >
@@ -88,7 +107,10 @@ export class Basket extends Component {
           className=" my-auto text-center"
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <button to="#" className="btn btn-primary text-center">
+          <button
+            className="btn btn-primary text-center"
+            onClick={this.payment}
+          >
             Buy
           </button>
         </div>

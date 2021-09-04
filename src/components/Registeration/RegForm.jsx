@@ -36,7 +36,7 @@ class RegForm extends Component {
       type: this.state.type,
     };
 
-    console.log("user =>" + JSON.stringify(user));
+    // console.log("user =>" + JSON.stringify(user));
 
     RegisterService.registerUser(user).then((res) => {
       this.props.history.push("/");

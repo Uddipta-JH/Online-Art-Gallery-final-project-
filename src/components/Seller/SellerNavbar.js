@@ -15,7 +15,7 @@ export const SellerNavbar = () => {
   return (
     <div className="sticky-top">
       <nav class="navbar navbar-expand-lg navbar-light ">
-        <a class="navbar-brand artgallery" href="#">
+        <a class="navbar-brand artgallery" href="Home">
           <span style={{ color: "#ff0000" }}>A</span>
           <span style={{ color: "#ff8700" }}>R</span>
           <span style={{ color: "#ffd300 " }}>T</span>
@@ -45,12 +45,6 @@ export const SellerNavbar = () => {
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            {/* <li class="nav-item active ">
-              <a class="nav-link text-danger " href="#">
-                Seller<span class="sr-only">(current)</span>
-              </a>
-            </li> */}
-
             <li class="nav-item active ">
               <a class="nav-link" href="/productPage">
                 Gallery<span class="sr-only">(current)</span>
@@ -61,32 +55,6 @@ export const SellerNavbar = () => {
                 Auction
               </a>
             </li>
-
-            {/* <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                style
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">
-                  Action
-                </a>
-                <a class="dropdown-item" href="#">
-                  Another action
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="UploadArt">
-                  Upload Art
-                </a>
-              </div>
-            </li> */}
             <li class="nav-item">
               <a class="nav-link " href="#">
                 Blog

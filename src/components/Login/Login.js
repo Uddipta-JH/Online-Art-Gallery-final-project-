@@ -52,13 +52,13 @@ export function Login() {
           localStorage.setItem("mobilenumber", mobile);
           localStorage.setItem("email", emailid);
           localStorage.setItem("address", add);
-          if (b.type == "Buyer") history.push("/", JSON.stringify(response));
-          else if (b.type == "Seller")
-            history.push("/", JSON.stringify(response));
-
-          // redirect(response.data.type);
+          redirect(response.data.type);
         }
       });
+
+    const redirect = (response) => {
+      history.push("/", JSON.stringify(response));
+    };
   });
   return (
     <div>

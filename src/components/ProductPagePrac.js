@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import RegisterService from "./RegisterService/RegisterService";
+import swal from "sweetalert";
 
 export class ProductPagePrac extends Component {
   constructor() {
@@ -10,16 +11,17 @@ export class ProductPagePrac extends Component {
   }
 
   addCart = (event) => {
-    console.log(event.target.value);
     let id = event.target.value;
     let product = {
       productid: id,
       userid: localStorage.getItem("regid"),
     };
 
-    console.log(product);
-
-    RegisterService.addCart(product).then((res) => {});
+    if (localStorage.getItem("loginSession") != null) {
+      RegisterService.addCart(product).then((res) => {});
+    } else {
+      swal("Error!", "User not logged in!");
+    }
   };
 
   ////////////////////////////////////////////////////////////////
@@ -44,8 +46,8 @@ export class ProductPagePrac extends Component {
           {this.state.products.map((productDetail) => (
             <div key={productDetail.productid}>
               <div
-                class="card"
-                style={{ width: "350px", height: "480px", margin: "40px" }}
+                class="card my-5"
+                style={{ width: "350px", height: "480px" }}
               >
                 <img
                   class="card-img-top"

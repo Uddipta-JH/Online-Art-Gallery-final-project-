@@ -28,7 +28,7 @@ function PaymentPage() {
             <span id="FullNamePara"></span>
           </div>
           <div className="row">
-            <div className="form-group col-2 ">
+            <div className="form-group col-1 ">
               <label>Expiry date</label>
               <input
                 type="number"

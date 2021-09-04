@@ -14,7 +14,7 @@ export const BeforeLoginNavbar = () => {
   return (
     <div className="sticky-top">
       <nav class="navbar navbar-expand-lg navbar-light ">
-        <a class="navbar-brand artgallery" href="#">
+        <a class="navbar-brand artgallery" href="Home">
           <span style={{ color: "#ff0000" }}>A</span>
           <span style={{ color: "#ff8700" }}>R</span>
           <span style={{ color: "#ffd300 " }}>T</span>
