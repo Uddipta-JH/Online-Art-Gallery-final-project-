@@ -13,7 +13,7 @@ export const Profile = () => {
               <h5>ORDERS</h5>
               <h5 className="text-secondary pl-3 pt-2">
                 {" "}
-                <a href="">Order & returns</a>
+                <a href="orderHistory">Order history</a>
               </h5>
               <hr />
               <h5>ART</h5>
@@ -22,21 +22,16 @@ export const Profile = () => {
                 <a href="UploadArt">Upload Art</a>
               </h5>
               <h5 className="text-secondary pl-3 pt-2">
-                {" "}
-                <a href="">Coupons</a>
+                <a href="basket">Cart</a>
               </h5>
-              {/* <h5 className="text-secondary pl-3 pt-2">
-                {" "}
-                <a href="">Coupons</a>
-              </h5>
-              <hr />
-              <h5>ORDERS</h5>
               <h5 className="text-secondary pl-3 pt-2">
-                {" "}
-                <a href="">Order & returns</a>
+                <a href="">Sales Record</a>
+              </h5>
+              <h5 className="text-secondary pl-3 pt-2">
+                <a href="orderRequest">Order Request</a>
               </h5>
               <hr />
-              <hr />
+              {/* <hr />
               <h5>CREDITS</h5>
               <h5 className="text-secondary pl-3 pt-2">
                 {" "}

@@ -20,6 +20,7 @@ import { Basket } from "./components/basket/components/Basket";
 import PaymentList from "./components/OrderPayment/PaymentList";
 import PaymentForm from "./components/Payment/Payment/PaymentForm";
 import OrderHistory from "./components/Payment/Payment/OrderHistory";
+import SalesOrderRequest from "./components/Payment/Payment/SalesOrderRequest";
 export function App() {
   return (
     <div>
@@ -44,6 +45,8 @@ export function App() {
             {localStorage.getItem("total") != null && (
               <Route path="/pay" component={PaymentForm} />
             )}
+            <Route path="/orderRequest" component={SalesOrderRequest} />
+
             <Route path="/orderHistory" component={OrderHistory} />
             <Route path="/basket" component={Basket} />
             <Route path="/Register" component={RegForm}></Route>
