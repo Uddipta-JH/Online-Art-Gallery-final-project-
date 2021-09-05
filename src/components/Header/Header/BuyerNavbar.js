@@ -51,40 +51,20 @@ export const BuyerNavbar = () => {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/AuctionSeller">
-                {" "}
-                Auction
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="fas fa-user-circle text-light" />
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="basket">
-                  Cart
-                </a>
-                <a class="dropdown-item" href="orderHistory">
-                  Order
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </div>
-            </li>
-
-            <li class="nav-item">
               <a class="nav-link " href="blog">
-                blog
+                Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">
+                {" "}
+                About Us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">
+                {" "}
+                Contact Us
               </a>
             </li>
           </ul>
@@ -103,6 +83,7 @@ export const BuyerNavbar = () => {
                   <i class="fas fa-user-circle text-light" />
                 </a>
                 <div
+                  id="dropdown-menu"
                   class="dropdown-menu"
                   style={{
                     left: "-105px",
@@ -110,31 +91,22 @@ export const BuyerNavbar = () => {
                   }}
                   aria-labelledby="navbarDropdown"
                 >
-                  <a href="Profile" id="btn" class="btn btn-outline-light ml-3">
+                  <a href="login" class="text-light ml-3">
+                    Login
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="Register" class="text-light ml-3">
+                    Register
+                  </a>
+                  <div class="dropdown-divider"></div>
+
+                  <a href="Profile" class="text-light ml-3">
                     Profile
                   </a>
                   <div class="dropdown-divider"></div>
 
-                  <a
-                    href=""
-                    id="btn"
-                    class="btn btn-outline-light ml-3 "
-                    onClick={endSession}
-                  >
+                  <a href="" class="text-light ml-3 " onClick={endSession}>
                     Logout
-                  </a>
-
-                  <div class="dropdown-divider"></div>
-                  <a href="login" id="btn" class="btn btn-outline-light ml-3">
-                    Login
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a
-                    href="Register"
-                    id="btn"
-                    class="btn btn-outline-light ml-3"
-                  >
-                    Register
                   </a>
                 </div>
               </li>

@@ -51,11 +51,6 @@ export const SellerNavbar = () => {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/AuctionSeller">
-                Auction
-              </a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link " href="#">
                 Blog
               </a>
@@ -73,18 +68,48 @@ export const SellerNavbar = () => {
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <a href="Profile">
-              <i class="fas fa-user-circle text-light" />
-              <b className="text-light ml-2">{localStorage.getItem("name")}</b>
-            </a>
-            <a
-              href=""
-              id="btn"
-              class="btn btn-outline-light ml-3"
-              onClick={endSession}
-            >
-              Logout
-            </a>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-user-circle text-light" />
+                </a>
+                <div
+                  id="dropdown-menu"
+                  class="dropdown-menu"
+                  style={{
+                    left: "-105px",
+                    textAlign: "center",
+                  }}
+                  aria-labelledby="navbarDropdown"
+                >
+                  <a href="login" class="text-light ml-3">
+                    Login
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="Register" class="text-light ml-3">
+                    Register
+                  </a>
+                  <div class="dropdown-divider"></div>
+
+                  <a href="ProfileSeller" class="text-light ml-3">
+                    Profile
+                  </a>
+                  <div class="dropdown-divider"></div>
+
+                  <a href="" class="text-light ml-3 " onClick={endSession}>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
           </form>
         </div>
       </nav>

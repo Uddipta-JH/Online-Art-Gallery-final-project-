@@ -1,8 +1,8 @@
 import React from "react";
-import { Home } from "../../3.9.21/HomeAfterLogin/Home";
 import "./Profile.css";
+import { Home } from "../../3.9.21/HomeAfterLogin/Home";
 
-export const Profile = () => {
+export const ProfileSeller = () => {
   if (localStorage.getItem("type") != null) {
     return (
       <div className="zAxisProfile">
@@ -11,22 +11,34 @@ export const Profile = () => {
             <div className="col-4 border">
               <div className="conatiner py-5">
                 <h4></h4>
-                <h3 className="text-secondary pl-3 pt-2">
-                  <b>
-                    {" "}
-                    <u> Welcome {localStorage.getItem("name")} </u>
-                  </b>
-                </h3>{" "}
                 <hr />
-                <h5>ORDERS</h5>
                 <h5 className="text-secondary pl-3 pt-2">
-                  <a href="basket">Cart</a>
-                </h5>
-                <h5 className="text-secondary pl-3 pt-2">
-                  {" "}
-                  <a href="orderHistory">Order history</a>
+                  Welcome {localStorage.getItem("name")}
                 </h5>
                 <hr />
+                <h5>ART</h5>
+                <h5 className="text-secondary pl-3 pt-2">
+                  <a href="UploadArt">Upload Art</a>
+                </h5>
+                <h5 className="text-secondary pl-3 pt-2">
+                  <a href="orderRequest">Order Request</a>
+                </h5>
+                <h5 className="text-secondary pl-3 pt-2">
+                  <a class="" href="/AuctionSeller">
+                    Auction
+                  </a>
+                </h5>
+                <hr />
+                {/* <hr />
+              <h5>CREDITS</h5>
+              <h5 className="text-secondary pl-3 pt-2">
+                {" "}
+                <a href="">Coupons</a>
+              </h5>
+              <h5 className="text-secondary pl-3 pt-2">
+                {" "}
+                <a href="">Coupons</a>
+              </h5> */}
               </div>
             </div>
             <div className="col-8">
@@ -78,26 +90,3 @@ export const Profile = () => {
     );
   }
 };
-
-{
-  /* <div class="col mb-5">
-                        <div class="card h-100">
-                            <div class="badge bg-dark text-white position-absolute" >Sale</div>
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Special Item</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>
-                                    $18.00
-                                </div>
-                            </div>
-                        </div>
-            </div> */
-}

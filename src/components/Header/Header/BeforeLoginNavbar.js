@@ -45,17 +45,13 @@ export const BeforeLoginNavbar = () => {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active ">
-              {/* <h2>
-                <a class="nav-link text-danger " href="/">
-                  Home<span class="sr-only">(current)</span>
-                </a>
-              </h2> */}
-            </li>
-
-            <li class="nav-item active ">
               <a class="nav-link" href="/productPage">
-                {" "}
                 Gallery<span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="blog">
+                Blog
               </a>
             </li>
             <li class="nav-item">
@@ -67,47 +63,53 @@ export const BeforeLoginNavbar = () => {
             <li class="nav-item">
               <a class="nav-link" href="">
                 {" "}
-                Contact
-              </a>
-            </li>
-            {/* <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                style
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">
-                  Action
-                </a>
-                <a class="dropdown-item" href="#">
-                  Another action
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </div>
-            </li> */}
-            <li class="nav-item">
-              <a class="nav-link " href="#">
-                Blog
+                Contact Us
               </a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <a href="login" id="btn" class="btn btn-outline-light ml-3">
-              Login
-            </a>
-            <a href="Register" id="btn" class="btn btn-outline-light ml-3">
-              Register
-            </a>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-user-circle text-light" />
+                </a>
+                <div
+                  id="dropdown-menu"
+                  class="dropdown-menu"
+                  style={{
+                    left: "-105px",
+                    textAlign: "center",
+                  }}
+                  aria-labelledby="navbarDropdown"
+                >
+                  <a href="login" class="text-light ml-3">
+                    Login
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="Register" class="text-light ml-3">
+                    Register
+                  </a>
+                  <div class="dropdown-divider"></div>
+
+                  <a href="Profile" class="text-light ml-3">
+                    Profile
+                  </a>
+                  <div class="dropdown-divider"></div>
+
+                  <a href="" class="text-light ml-3 " onClick={endSession}>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
           </form>
         </div>
       </nav>

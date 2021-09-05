@@ -9,7 +9,7 @@ export default class SalesOrderRequest extends Component {
         super(props)
 
         this.state = {
-            payment:[]
+            orders:[]
         }
     }
     componentDidMount(event) {
@@ -20,7 +20,7 @@ export default class SalesOrderRequest extends Component {
 
           console.log(userid);
         axios.post(`http://localhost:8081/orderRequest/sales`,userid).then((res)=>{
-            this.setState({payment:res.data});
+            this.setState({orders:res.data});
             console.log(res);
         });
     }
@@ -48,16 +48,16 @@ export default class SalesOrderRequest extends Component {
                         </thead>
                         <tbody>
                             {
-                                this.state.payment.map(
-                                    payment => 
-                                        <tr key={payment.orderId}>
-                                            <td>{payment.productname}</td>
-                                            <td>Rs {payment.sellingprice}</td>
-                                            <td>{payment.fname}</td>
-                                            <td>{payment.lname}</td>
-                                            <td>{payment.mobilenumber}</td>
-                                            <td>{payment.email}</td>
-                                            <td>{payment.address}</td>
+                                this.state.orders.map(
+                                    orders => 
+                                        <tr key={orders.orderId}>
+                                            <td>{orders.productname}</td>
+                                            <td>Rs {orders.sellingprice}</td>
+                                            <td>{orders.fname}</td>
+                                            <td>{orders.lname}</td>
+                                            <td>{orders.mobilenumber}</td>
+                                            <td>{orders.email}</td>
+                                            <td>{orders.address}</td>
 
                                             <td><button
                     //   value={}

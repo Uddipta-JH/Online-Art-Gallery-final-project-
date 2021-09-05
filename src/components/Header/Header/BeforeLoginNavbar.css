@@ -18,10 +18,10 @@ nav a {
   color: white !important;
 }
 #btn:hover {
-  color: #493058 !important;
+  color: hsl(59, 100%, 68%) !important;
 }
 
-.dropdown-menu {
+#dropdown-menu {
   background-color: #493058 !important;
   width: 160px !important;
 }
